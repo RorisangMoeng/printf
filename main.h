@@ -1,14 +1,11 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-<<<<<<< HEAD
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 #include <limits.h>
 #include <unistd.h>
-
-
 
 /**
  * struct format - match the conversion specifiers for printf
@@ -53,6 +50,5 @@ int _putchar(char c);
 #include <unistd.h>
 
 int _printf(const char *format, ...);
->>>>>>> 7a2f653ef05c4338cacb463c3d7f83f911bfbc15
 
 #endif
