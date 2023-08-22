@@ -3,16 +3,15 @@
 #include <stdarg.h>
 
 /**
- * _printf - selects the correct function to be printed
- * @format - identifier to look for
+ * _printf - function to be printed
+ * @format: identifier
  * Return: length of the string
  */
-
 int _printf(const char *format, ...)
 {
 	va_list args;
-	va_start(args, format);
 
+	va_start(args, format);
 
 	int count = 0;
 	char ch;
@@ -21,37 +20,33 @@ int _printf(const char *format, ...)
 	while (*format != '\0')
 	{
 		if (*format == '%')
+		{
 			format++;
-
-		else(*format)
-
-			'c' :
-				ch = va_arg(args, int);
-				putchar(ch);
-				count++;
-			's' :
-				str = va_arg(args, const char*);
-		while
-			(*str != '\0')
+			if (*format == 'c')
 			{
-				putchar(*str);
-				str++;
+				ch = va_arg(args, int);
+				putchar(ch, &count);
 				count++;
 			}
-			'%' :
+				str = va_arg(args, const char*);
+			else if (*format == 's')
+			{
+				str = va_arg(args, const char*);
+				while (*str != '\0')
+				{
+				putchar(*str, &count);
+				str++;
+				count++;
+				}
+			}
 				putchar('%');
 				count++;
-	}
+		}
 		else
 		{
-			putchar(*format);
-			count++;
-		}
+			putchar(*format, &count);
+			count++; }
 		format++;
-		{
-		va_end(args);
-		return count;
-		}
-		
-		return 0;
+	} va_end(args);
+	return (count);
 }

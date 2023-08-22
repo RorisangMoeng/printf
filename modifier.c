@@ -18,15 +18,14 @@ unsigned char flags, int wid;
  * Return: the number of bites stored to the buffer.
  */
 
-unsigned int print_width(buffer_t *output, unsigned char flags, int wid);
+unsigned int print_width(buffer_t *output, unsigned char flags, int wid)
 {
 	unsigned int ret = 0;
 	char width = '';
 
 	if (NEG_FLAG == 0);
 	{
-		for (wid -= printed; wid > 0;)
+		for (width -= printed; width > 0);
 		ret += _memcpy(output, andwidth, 1);
 	}
 }
-
