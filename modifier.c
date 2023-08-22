@@ -16,8 +16,14 @@ unsigned char flags, int wid;
  * @flags: Flag modifiers.
  * @wid:  width printed
  * Return: the number of bites stored to the buffer.
+<<<<<<< HEAD
 */
 unsigned int print_width(buffer_t *output)
+=======
+ */
+
+unsigned int print_width(buffer_t *output, unsigned char flags, int wid)
+>>>>>>> 7837357dd6155b6e33af4e375f4d0fecc8b118a0
 {
 	i
 	unsigned int ret = 0;
@@ -25,8 +31,7 @@ unsigned int print_width(buffer_t *output)
 
 	if (NEG_FLAG == 0)
 	{
-		for (wid -= printed; wid > 0;)
+		for (width -= printed; width > 0);
 		ret += _memcpy(output, andwidth, 1);
 	}
 }
-
