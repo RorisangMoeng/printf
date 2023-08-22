@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+<<<<<<< HEAD
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
@@ -45,5 +46,13 @@ int printf_char(va_list val);
 int  val);
 int _printf(const char *format, ...);
 int _putchar(char c);
+=======
+#include <limits.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int _printf(const char *format, ...);
+>>>>>>> 7a2f653ef05c4338cacb463c3d7f83f911bfbc15
 
 #endif
