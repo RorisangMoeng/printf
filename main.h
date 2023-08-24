@@ -7,8 +7,6 @@
 #include <limits.h>
 #include <unistd.h>
 
-
-
 /**
  * struct format - match the conversion specifiers for printf
  * @id: type char pointer of the specifier i.e (l, h) for (d, i, u, o, x, X)
@@ -41,5 +39,15 @@ int _strlenc(const char *s);
 int rev_string(char *s);
 int _printf(const char *format, ...);
 int _putchar(char c);
+<<<<<<< HEAD
+=======
+=======
+#include <limits.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int _printf(const char *format, ...);
+>>>>>>> b99afe71616f4ff02c6aca610b54fde8d98f1e6c
 
 #endif
