@@ -1,52 +1,39 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdarg.h>
 
 /**
- * _printf - function to be printed
- * @format: identifier
+ * _printf - s a function that selects the correct function to print.
+ * @format: identifier to look for.
  * Return: length of the string
  */
-int _printf(const char *format, ...)
-{
+int _printf(const char *formart, ...);
+
 	va_list args;
+	int i = 0, j, len = 0;
+	
+	va_start(args, format)
+	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	ret(-1)
 
-	va_start(args, format);
-
-	int count = 0;
-	char ch;
-	const char *str;
-
-	while (*format != '\0')
+	while (format[i] != '\0')
 	{
 		if (*format == '%')
 		{
-			format++;
-			if (*format == 'c')
+			j = 15;
+			while (j >= 0)
 			{
-				ch = va_arg(args, int);
-				putchar(ch, &count);
-				count++;
-			}
-				str = va_arg(args, const char*);
-			else if (*format == 's')
-			{
-				str = va_arg(args, const char*);
-				while (*str != '\0')
+				if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 				{
-				putchar(*str, &count);
-				str++;
-				count++;
+					len += m[j].f(args);
+					i = i + 2;
+					goto Here
 				}
-			}
-				putchar('%');
-				count++;
+				j--;
+
 		}
-		else
-		{
-			putchar(*format, &count);
-			count++; }
-		format++;
-	} va_end(args);
-	return (count);
+		_putchar(format[i]);
+		len++;
+		i++;
+	}
+va_end(args);
+return (len);
 }

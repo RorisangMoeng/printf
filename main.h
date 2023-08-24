@@ -1,7 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-<<<<<<< HEAD
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
@@ -40,19 +39,7 @@ int _strlen(char *s);
 int *_strcpy(char *dest, char *src);
 int _strlenc(const char *s);
 int rev_string(char *s);
-printf_string(va_list
-int printf_37(void);
-int printf_char(va_list val);
-int  val);
 int _printf(const char *format, ...);
 int _putchar(char c);
-=======
-#include <limits.h>
-#include <stdarg.h>
-#include <stdlib.h>
-#include <unistd.h>
-
-int _printf(const char *format, ...);
->>>>>>> 7a2f653ef05c4338cacb463c3d7f83f911bfbc15
 
 #endif
